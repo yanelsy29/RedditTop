@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController">
+            <connections>
+                <outlet property="pickerView" destination="NgV-rt-foN" id="YB9-er-KzL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="1AP-zS-BMa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am1-CV-yz7">
+                    <rect key="frame" x="0.0" y="410" width="375" height="257"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-yK-Lcp">
+                            <rect key="frame" x="321" y="8" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="aoh-3I-ST8"/>
+                                <constraint firstAttribute="height" constant="30" id="yM2-Re-jt2"/>
+                            </constraints>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="btnDoneTapped:" destination="-1" eventType="touchUpInside" id="K1e-Jt-QR5"/>
+                            </connections>
+                        </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgV-rt-foN">
+                            <rect key="frame" x="0.0" y="41" width="375" height="216"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="KXb-4a-oDh"/>
+                                <outlet property="delegate" destination="-1" id="Baj-D3-WGw"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NgV-rt-foN" secondAttribute="trailing" id="BIG-6g-KMT"/>
+                        <constraint firstItem="Vem-yK-Lcp" firstAttribute="top" secondItem="am1-CV-yz7" secondAttribute="top" constant="8" id="Ea1-nt-cyb"/>
+                        <constraint firstAttribute="height" constant="257" id="GMl-Fe-mHf"/>
+                        <constraint firstAttribute="trailing" secondItem="Vem-yK-Lcp" secondAttribute="trailing" constant="8" id="MVX-2V-LbB"/>
+                        <constraint firstAttribute="bottom" secondItem="NgV-rt-foN" secondAttribute="bottom" id="Ut9-H6-Dmd"/>
+                        <constraint firstItem="NgV-rt-foN" firstAttribute="leading" secondItem="am1-CV-yz7" secondAttribute="leading" id="fXU-I0-cR3"/>
+                        <constraint firstItem="NgV-rt-foN" firstAttribute="top" secondItem="Vem-yK-Lcp" secondAttribute="bottom" constant="3" id="gep-fZ-oXW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20171108128834356" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="am1-CV-yz7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="06H-Ul-vzA"/>
+                <constraint firstAttribute="trailing" secondItem="am1-CV-yz7" secondAttribute="trailing" id="2XG-ix-EGi"/>
+                <constraint firstAttribute="bottom" secondItem="am1-CV-yz7" secondAttribute="bottom" id="eV3-g1-ZZR"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
